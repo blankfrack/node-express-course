@@ -29,6 +29,16 @@ app.get('/users/:id',function(req,res){
 	})
 })
 
+app.get('/helloWorld', function(req, res) {
+    console.log("Hello World")
+
+    res.json({
+        success: true,
+        message: 'Hello World!',
+    })
+})
+
+
 app.post('/login',function(req,res){
     const username=req.body.username;
     const password=req.body.password;
