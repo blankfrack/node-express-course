@@ -10,7 +10,7 @@ const mockUserData = [{
     {
         name: 'Jill'
     }
-]
+];
 
 app.get('/users', function (req, res) {
     res.json({
@@ -18,7 +18,7 @@ app.get('/users', function (req, res) {
         message: 'successfully got users. Nice!',
         users: mockUserData
     })
-})
+});
 
 app.get('/users/:id',function(req,res){
 	console.log(req.params.id)
@@ -27,16 +27,16 @@ app.get('/users/:id',function(req,res){
 		message: 'got one user',
 		user: req.params.id
 	})
-})
+});
 
 app.get('/helloWorld', function(req, res) {
-    console.log("Hello World")
+    console.log("Hello World !")
 
     res.json({
         success: true,
-        message: 'Hello World!',
+        message: 'Hello World!!!!',
     })
-})
+});
 
 
 app.post('/login',function(req,res){
@@ -58,8 +58,9 @@ app.post('/login',function(req,res){
               message: 'password and username do not match'
          })
     }
-})
+});
+
 
 app.listen(8000, function () {
     console.log("server is running")
-})
+});
